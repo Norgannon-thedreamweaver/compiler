@@ -42,7 +42,10 @@ for line in lines:
                 word+=line[i]
                 i+=1
             i-=1
-            print("Int("+word.lstrip('0')+")")
+            tmp=word.lstrip('0')
+            if tmp=="":
+                tmp="0"
+            print("Int("+tmp+")")
         elif line[i] in delimiters:
             d_index=delimiters.index(line[i])
             if d_index==0:
